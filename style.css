@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    z-index: -2;
+    background-color: rgb(196, 231, 253);
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.sidebar {
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    transition: all 0.6s 0s ease-out;
+}
+
+.crossSidebar {
+    transform: translateX(-100%);
+}
+
+.elem {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* .....header......... */
+
+.header {
+    padding: 1em 1.3em 1em 1.3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header>h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.4em;
+}
+.header>h1:hover{
+    cursor:pointer;
+}
+
+.fahad {
+    color: rgb(0, 157, 255);
+}
+
+.btn {
+    color: red;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    transition: transform 0.3s 0s ease-in;
+    /* outline: none; */
+}
+
+.btn:hover {
+    transform: rotate(-90deg);
+}
+
+
+/* ......links...... */
+
+.links>li {
+    list-style: none;
+    padding: 1em 1em 1em 1em;
+    transition: background-color 0.3s 0s ease-in;
+}
+
+.links>li>a {
+    text-transform: capitalize;
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.links>li:hover {
+    background-color: rgb(142, 212, 255);
+    cursor: pointer;
+}
+
+
+
+/* ....social-Links.....  */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6em;
+}
+
+.social-icons>li {
+    list-style: none;
+}
+
+.social-icons>li>a {
+    color: rgb(0, 157, 255);
+    font-size: 1.5em;
+    margin: 1em;
+}
+
+.social-icons>li>a:hover {
+    opacity: 0.7;
+}
+
+
+/* ..........bars........ */
+.btnBars {
+    /* height: 0px; */
+    margin-top: 2em;
+    /* margin-left: 1.5em; */
+    background: none;
+    border: none;
+    /* height: 100px; */
+    z-index: 1;
+    position: absolute;
+    left: 90%;
+    padding: 0.5em 1em 1em 0em;
+    animation: bounce 1.5s 0s ease-in-out infinite;
+    color: rgb(0, 157, 255);
+    /* display: none; */
+}
+
+.btnBars:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.3s 0s ease-in-out;
+}
+/* .barsss{
+    width: 300px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media screen and (min-width:989.98px) {
+    .sidebar {
+        width: 30%;
+    }
+}
